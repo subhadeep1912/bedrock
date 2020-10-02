@@ -1307,6 +1307,12 @@
         "js/firefox/campaign/unfck.de.js"
       ],
       "name": "firefox-unfck-de"
+    },
+    {
+      "files": [
+        "js/base/sticky-promo.js"
+      ],
+      "name": "sticky-promo"
     }
   ]
 }
