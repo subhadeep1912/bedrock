@@ -702,12 +702,6 @@
         "css/firefox/unfck.fr.scss"
       ],
       "name": "firefox-unfck-fr"
-    },
-    {
-      "files": [
-        "css/firefox/sticky-promo.scss"
-      ],
-      "name": "firefox_sticky_promo"
     }
   ],
   "js": [
