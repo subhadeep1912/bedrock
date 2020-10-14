@@ -1,0 +1,165 @@
+{# This Source Code Form is subject to the terms of the Mozilla Public
+ # License, v. 2.0. If a copy of the MPL was not distributed with this
+ # file, You can obtain one at http://mozilla.org/MPL/2.0/. #}
+
+{% extends "firefox/base/base-protocol.html" %}
+
+{% from "macros-protocol.html" import hero, card with context %}
+
+{% block page_title %}{{ ftl('switch-switch-from-chrome') }}{% endblock %}
+{% block page_desc %}{{ ftl('switch-switching-to-firefox-is-fast-updated', fallback='switch-switching-to-firefox-is-fast') }}{% endblock %}
+
+{% block page_css %}
+  {{ css_bundle('more') }}
+{% endblock %}
+
+{% block content %}
+<main>
+  {% call hero(
+    title='Firefox products are designed to protect your privacy',
+    class='privacy-promise-hero mzp-has-image mzp-t-dark mzp-t-firefox',
+    image_url='img/firefox/privacy/promise/privacy-hero.png',
+    include_highres_image=True,
+    include_cta=True,
+    heading_level=2
+  ) %}
+    <a href="{{ url('firefox.privacy.products') }}" class="mzp-c-button mzp-t-product">Learn more</a>
+  {% endcall %}
+
+  <div class="mzp-l-content">
+    <div class="mzp-l-card-quarter">
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('title'),
+          ga_title='title',
+          desc=_('desc'),
+          image_url='img/firefox/browsers/browser-history/browser-history-b.png',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-16-9',
+          link_url=url('mozorg.about.leadership')
+      )}}
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Firefox: Fast for Good'),
+          ga_title='Firefox: Fast for Good',
+          desc=_('When you use the new Firefox, you get a blazing fast experience while supporting Mozilla’s mission to keep the internet healthy, weird and welcoming to all.'),
+          image_url='img/mozorg/about/firefox.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url=url('firefox.new')
+      )}}
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Walking Our Privacy Talk'),
+          ga_title='Walking Our Privacy Talk',
+          desc=_('When the Facebook breach was revealed, Mozilla had an immediate response – and a Firefox product to support user privacy.'),
+          image_url='img/mozorg/about/container.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url='https://blog.mozilla.org/Internetcitizen/2018/06/06/the-today-show-mozilla-firefox-facebook-container/'
+      )}}
+      {{ card(
+        class='mzp-c-card-medium',
+        title=_('Walking Our Privacy Talk'),
+        ga_title='Walking Our Privacy Talk',
+        desc=_('When the Facebook breach was revealed, Mozilla had an immediate response – and a Firefox product to support user privacy.'),
+        image_url='img/mozorg/about/container.jpg',
+        include_highres_image=True,
+        aspect_ratio='mzp-has-aspect-3-2',
+        link_url='https://blog.mozilla.org/Internetcitizen/2018/06/06/the-today-show-mozilla-firefox-facebook-container/'
+    )}}
+    </div>
+
+    <div class="mzp-l-card-quarter">
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('title'),
+          ga_title='title',
+          desc=_('desc'),
+          image_url='img/mozorg/about/leaders.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url=url('mozorg.about.leadership')
+      )}}
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Firefox: Fast for Good'),
+          ga_title='Firefox: Fast for Good',
+          desc=_('When you use the new Firefox, you get a blazing fast experience while supporting Mozilla’s mission to keep the internet healthy, weird and welcoming to all.'),
+          image_url='img/mozorg/about/firefox.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url=url('firefox.new')
+      )}}
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Walking Our Privacy Talk'),
+          ga_title='Walking Our Privacy Talk',
+          desc=_('When the Facebook breach was revealed, Mozilla had an immediate response – and a Firefox product to support user privacy.'),
+          image_url='img/mozorg/about/container.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url='https://blog.mozilla.org/Internetcitizen/2018/06/06/the-today-show-mozilla-firefox-facebook-container/'
+      )}}
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Talking Internet Issues IRL'),
+          ga_title='Talking Internet Issues IRL',
+          desc=_('In Mozilla’s IRL podcast, host Manoush Zomorodi shares real stories of life online and real talk about the future of the Web.'),
+          image_url='img/mozorg/about/irl.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url='https://irlpodcast.org/'
+      )}}
+    </div>
+
+    <div class="mzp-l-card-quarter">
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('title'),
+          ga_title='title',
+          desc=_('desc'),
+          image_url='img/mozorg/about/leaders.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url=url('mozorg.about.leadership')
+      )}}
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Firefox: Fast for Good'),
+          ga_title='Firefox: Fast for Good',
+          desc=_('When you use the new Firefox, you get a blazing fast experience while supporting Mozilla’s mission to keep the internet healthy, weird and welcoming to all.'),
+          image_url='img/mozorg/about/firefox.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url=url('firefox.new')
+      )}}
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Walking Our Privacy Talk'),
+          ga_title='Walking Our Privacy Talk',
+          desc=_('When the Facebook breach was revealed, Mozilla had an immediate response – and a Firefox product to support user privacy.'),
+          image_url='img/mozorg/about/container.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url='https://blog.mozilla.org/Internetcitizen/2018/06/06/the-today-show-mozilla-firefox-facebook-container/'
+      )}}
+      {{ card(
+          class='mzp-c-card-medium',
+          title=_('Talking Internet Issues IRL'),
+          ga_title='Talking Internet Issues IRL',
+          desc=_('In Mozilla’s IRL podcast, host Manoush Zomorodi shares real stories of life online and real talk about the future of the Web.'),
+          image_url='img/mozorg/about/irl.jpg',
+          include_highres_image=True,
+          aspect_ratio='mzp-has-aspect-3-2',
+          link_url='https://irlpodcast.org/'
+      )}}
+    </div>
+  </div>
+</main>
+{% endblock %}
+
+{% block js %}
+  {{ js_bundle('more') }}
+{% endblock %}
+
