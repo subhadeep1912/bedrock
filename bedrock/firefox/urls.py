@@ -6,6 +6,7 @@ from django.conf.urls import url
 import bedrock.releasenotes.views
 from bedrock.mozorg.util import page
 from bedrock.releasenotes import version_re
+from django.conf import settings
 
 from bedrock.firefox import views
 from bedrock.utils import views as utils_views
@@ -173,5 +174,15 @@ urlpatterns = (
     page('firefox/unfck', 'firefox/campaign/unfck/index.html', active_locales=['de', 'en-US', 'fr']),
 
     # Issue #9490 - Evergreen Content for SEO
-    page('firefox/more', 'firefox/more.html'),
+    page('firefox/more', 'firefox/more.html', ftl_files='firefox/more'),
 )
+
+
+if settings.DEV:
+    urlpatterns += (
+        page('firefox/browsers/chromebook', 'firefox/browsers/chromebook.html', ftl_files='firefox/browsers/chromebook'),
+        page('firefox/browsers/quantum', 'firefox/browsers/quantum.html', ftl_files='firefox/browsers/quantum'),
+        page('firefox/faq', 'firefox/faq.html', ftl_files='firefox/faq'),
+        # temporary URL as sync forwards to accounts
+        page('firefox/account-sync', 'firefox/sync.html', ftl_files='firefox/sync'),
+    )
